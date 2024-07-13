@@ -217,7 +217,7 @@
         "platform": {
             "name": "jvm",
             "config": {
-                "home": "C:\\Program Files\\Java\\jdk-22",
+                "home": "C:\\Users\\Khali\\.jdks\\corretto-17.0.11",
                 "options": [
                     "-Duser.dir=C:\\Users\\Khali\\Desktop\\M1\\S2\\Scala\\Projet\\funprog-al\\project"
                 ]
