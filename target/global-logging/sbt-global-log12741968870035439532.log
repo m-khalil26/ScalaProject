@@ -1,0 +1,182 @@
+[debug] > Exec(early(addDefaultCommands), None, None)
+[debug] > Exec(addDefaultCommands, None, None)
+[debug] > Exec(early(initialize), None, None)
+[debug] > Exec(initialize, None, None)
+[debug] > Exec(early(addPluginSbtFile="""C:\Users\Khali\AppData\Local\Temp\idea8.sbt"""), None, None)
+[debug] > Exec(addPluginSbtFile="""C:\Users\Khali\AppData\Local\Temp\idea8.sbt""", None, None)
+[debug] > Exec(boot, None, None)
+[debug] > Exec(writeSbtVersion, None, None)
+[debug] > Exec(reload, None, None)
+[debug] > Exec(sbtStashOnFailure, None, None)
+[debug] > Exec(onFailure loadFailed, None, None)
+[debug] > Exec(loadp, None, None)
+[info] welcome to sbt 1.9.7 (Oracle Corporation Java 22.0.1)
+[debug] Load.defaultLoad until apply took 462.1936ms
+[debug]                       Load.loadUnit: plugins took 109.8152ms
+[debug]                       Load.loadUnit: defsScala took 0.4521ms
+[debug] [Loading] Scanning directory C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project\project
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 22.0214 ms
+[debug]                           Load.resolveProject(funprog-al-build-build-build) took 49.1592ms
+[debug]                         Load.loadTransitive: finalizeProject(Project(id funprog-al-build-build-build, base: C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project\project, plugins: List(<none>))) took 92.1996ms
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project\project, returning: (funprog-al-build-build-build)
+[debug]                       Load.loadUnit: loadedProjectsRaw took 117.4666ms
+[debug]                       Load.loadUnit: cleanEvalClasses took 0.3301ms
+[debug]                     Load.loadUnit(file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/project/project/project/, ...) took 238.2378ms
+[debug]                   Load.apply: load took 424.6107ms
+[debug]                   Load.apply: resolveProjects took 10.876ms
+[debug]                   Load.apply: finalTransforms took 125.9899ms
+[debug]                   Load.apply: config.delegates took 17.6909ms
+[debug]                   Load.apply: Def.make(settings)... took 841.2309ms
+[debug]                   Load.apply: structureIndex took 238.7799ms
+[debug]                   Load.apply: mkStreams took 8.2241ms
+[info] loading project definition from C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]                 Load.loadUnit: plugins took 2785.6762ms
+[debug]                 Load.loadUnit: defsScala took 0.0072ms
+[debug] [Loading] Scanning directory C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project
+[debug]                   Load.loadUnit: mkEval took 4.2951ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.4438 ms
+[info] loading settings for project funprog-al-build-build from metals.sbt ...
+[debug]                     Load.resolveProject(funprog-al-build-build) took 2.3103ms
+[debug]                   Load.loadTransitive: finalizeProject(Project(id funprog-al-build-build, base: C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project, plugins: List(<none>))) took 5.3706ms
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project, returning: (funprog-al-build-build)
+[debug]                 Load.loadUnit: loadedProjectsRaw took 144.2238ms
+[debug]                 Load.loadUnit: cleanEvalClasses took 4.8315ms
+[debug]               Load.loadUnit(file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/project/project/, ...) took 2935.9406ms
+[debug]             Load.apply: load took 2937.5806ms
+[debug]             Load.apply: resolveProjects took 0.1147ms
+[debug]             Load.apply: finalTransforms took 10.4414ms
+[debug]             Load.apply: config.delegates took 0.3218ms
+[debug]             Load.apply: Def.make(settings)... took 58.0868ms
+[debug]             Load.apply: structureIndex took 23.3835ms
+[debug]             Load.apply: mkStreams took 0.0027ms
+[info] loading project definition from C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project\project
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]           Load.loadUnit: plugins took 3242.8125ms
+[debug]           Load.loadUnit: defsScala took 0.048ms
+[debug] [Loading] Scanning directory C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project
+[debug]             Load.loadUnit: mkEval took 0.4567ms
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.MiniDependencyTreePlugin,sbt.plugins.JUnitXmlReportPlugin,sbt.plugins.SemanticdbPlugin)
+[debug] Plugins.deducer#function took 2.3913 ms
+[info] loading settings for project funprog-al-build from metals.sbt,idea8.sbt ...
+[debug]               Load.resolveProject(funprog-al-build) took 65.4432ms
+[debug]             Load.loadTransitive: finalizeProject(Project(id funprog-al-build, base: C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project, plugins: List(<none>))) took 68.5224ms
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project, returning: (funprog-al-build)
+[debug]           Load.loadUnit: loadedProjectsRaw took 3478.8162ms
+[debug]           Load.loadUnit: cleanEvalClasses took 6.8536ms
+[debug]         Load.loadUnit(file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/project/, ...) took 6731.1167ms
+[debug]       Load.apply: load took 6734.1875ms
+[debug]       Load.apply: resolveProjects took 0.3769ms
+[debug]       Load.apply: finalTransforms took 18.0679ms
+[debug]       Load.apply: config.delegates took 0.5541ms
+[debug]       Load.apply: Def.make(settings)... took 51.4182ms
+[debug]       Load.apply: structureIndex took 23.689ms
+[debug]       Load.apply: mkStreams took 0.0033ms
+[info] loading project definition from C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\project
+[debug] Evaluating tasks: bloopInstall
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[success] Generated .bloop\funprog-al-build.json
+[success] Total time: 3 s, completed 13 juil. 2024, 17:37:03
+[debug] Running task... Cancel: Signal, check cycles: false, forcegc: true
+[debug]     Load.loadUnit: plugins took 10443.7572ms
+[debug]     Load.loadUnit: defsScala took 0.0032ms
+[debug] [Loading] Scanning directory C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al
+[debug] [Loading] Found non-root projects 
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al, returning: ()
+[debug] deducing auto plugins based on known facts Set(Atom(sbt.plugins.CorePlugin)) and clauses Clauses(Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.ScriptedPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.SbtPlugin),Set(Atom(sbt.ScriptedPlugin)))
+[debug] Clause(Atom(sbt.plugins.SemanticdbPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JUnitXmlReportPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.MiniDependencyTreePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(bloop.integrations.sbt.BloopPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.StructurePlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.IdeaShellPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.IvyPlugin)))
+[debug] Clause(Atom(sbt.plugins.IvyPlugin),Set(Atom(sbt.plugins.JvmPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.SemanticdbPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.JUnitXmlReportPlugin)))
+[debug] Clause(Atom(sbt.plugins.CorePlugin),Set(Atom(sbt.plugins.Giter8TemplatePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(sbt.plugins.MiniDependencyTreePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(bloop.integrations.sbt.BloopPlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.StructurePlugin)))
+[debug] Clause(Atom(sbt.plugins.JvmPlugin),Set(Atom(org.jetbrains.sbt.IdeaShellPlugin)))
+[debug] Clause(And(Set(Atom(sbt.plugins.CorePlugin), Atom(sbt.plugins.JvmPlugin))),Set(Atom(org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin))))
+[debug]   :: deduced result: Matched(sbt.plugins.CorePlugin,sbt.plugins.Giter8TemplatePlugin,sbt.plugins.IvyPlugin,sbt.plugins.JvmPlugin,bloop.integrations.sbt.BloopPlugin,sbt.plugins.SemanticdbPlugin,org.jetbrains.sbt.indices.SbtIntellijIndicesPlugin,sbt.plugins.JUnitXmlReportPlugin,org.jetbrains.sbt.IdeaShellPlugin,org.jetbrains.sbt.StructurePlugin,sbt.plugins.MiniDependencyTreePlugin)
+[debug] Plugins.deducer#function took 2.6509 ms
+[debug]         Load.resolveProject(funprog-al) took 33.1524ms
+[debug]       Load.loadTransitive: finalizeProject(Project(id funprog-al, base: C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al, plugins: List(<none>))) took 37.1276ms
+[debug] [Loading] Done in C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al, returning: (funprog-al)
+[debug]     Load.loadUnit: loadedProjectsRaw took 38.4026ms
+[debug]     Load.loadUnit: cleanEvalClasses took 0.0104ms
+[debug]   Load.loadUnit(file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/, ...) took 10483.7959ms
+[debug] Load.apply: load took 10503.1465ms
+[debug] Load.apply: resolveProjects took 0.3022ms
+[debug] Load.apply: finalTransforms took 16.2567ms
+[debug] Load.apply: config.delegates took 0.2035ms
+[debug] Load.apply: Def.make(settings)... took 75.9014ms
+[debug] Load.apply: structureIndex took 15.4787ms
+[debug] Load.apply: mkStreams took 0.0033ms
+[info] set current project to funprog-al (in build file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/)
+[debug] > Exec(sbtPopOnFailure, None, None)
+[debug] > Exec(resumeFromFailure, None, None)
+[debug] > Exec(notifyUsersAboutShell, None, None)
+[debug] > Exec(iflast shell, None, None)
+[debug] > Exec(; set ideaPort in Global := 61003 ; idea-shell, None, None)
+[debug] > Exec(set ideaPort in Global := 61003, None, None)
+[info] Defining Global / ideaPort
+[info] The new value will be used by no settings or tasks.
+[debug] Defining 
+[debug] 	Global / ideaPort
+[debug] 
+[debug] The new value will be used by no settings or tasks.
+[info] Reapplying settings...
+[info] set current project to funprog-al (in build file:/C:/Users/Khali/Desktop/M1/S2/Scala/Projet/funprog-al/)
+[debug] > Exec(idea-shell, None, None)
