@@ -1,50 +1,67 @@
-package progfun
-
 import scala.util.{Try, Success, Failure}
 
 class InputParser(input: String) {
 
-  private def parseFieldSize(line: String): Try[(Int, Int)] = {
-    line.split(" ").toList match {
-      case List(width, height) =>
-        Try((width.toInt, height.toInt))
+  private def parseDimensionsTerrain(ligne: String): Try[(Int, Int)] = {
+    val trimmedLine = ligne.trim()
+
+    trimmedLine.split(" ").toList match {
+      case List(largeur, hauteur) =>
+        Try {
+          println(largeur + " " + hauteur)
+          val largeurInt = largeur.toInt
+          val hauteurInt = hauteur.toInt
+          println("largeurInt : " + largeurInt + " hauteurInt : " + hauteurInt)
+          (largeurInt, hauteurInt)
+        }.recoverWith {
+          case _: NumberFormatException =>
+            Failure(new IllegalArgumentException("Invalid terrain dimensions format: dimensions must be integers"))
+        }
       case _ =>
-        Failure(new IllegalArgumentException("Invalid field size format"))
+        Failure(new IllegalArgumentException("Invalid terrain dimensions format"))
     }
   }
 
-  private def parseMower(line1: String, line2: String): Try[(Int, Int, Char, String)] = {
-    val position = line1.split(" ").toList
-    if (position.length == 3) {
-      Try {
-        val x = position(0).toInt
-        val y = position(1).toInt
-        val orientation = position(2).head // take first character as orientation
-        (x, y, orientation, line2.trim)
-      }
-    } else {
-      Failure(new IllegalArgumentException("Invalid mower position format"))
+
+  private def parseTondeuse(lignes: List[String]): Try[(Int, Int, Char, String)] = {
+    lignes match {
+      case List(ligne1, ligne2) =>
+        val position = ligne1.split(" ").toList
+        if (position.length == 3) {
+          Try {
+            val x = position(0).toInt
+            val y = position(1).toInt
+            val orientation = position(2).head // prendre le premier caractère comme orientation
+            (x, y, orientation, ligne2.trim)
+          }.recoverWith {
+            case _: NumberFormatException =>
+              Failure(new IllegalArgumentException("Format de position de la tondeuse invalide : les coordonnées doivent être des entiers"))
+          }
+        } else {
+          Failure(new IllegalArgumentException("Format de position de la tondeuse invalide"))
+        }
+      case _ =>
+        Failure(new IllegalArgumentException("Deux lignes attendues pour la tondeuse, différent trouvé"))
     }
   }
 
   def parse(): Try[(Int, Int, List[(Int, Int, Char, String)])] = {
-    val lines = input.split("\n").toList
-    if (lines.length < 2) {
-      Failure(new IllegalArgumentException("Input file does not contain enough lines"))
+    val lignes = input.split("\n").toList
+    if (lignes.length < 2) {
+      Failure(new IllegalArgumentException("Le fichier d'entrée ne contient pas assez de lignes"))
     } else {
-      parseFieldSize(lines.head).flatMap { case (width, height) =>
-        val mowerLines = lines.tail
-        val mowerPairs = mowerLines.sliding(2, 2).toList
-        val parsedMowers = mowerPairs.map { case List(line1, line2) =>
-          parseMower(line1, line2)
-        }
-        val validatedMowers = parsedMowers.foldRight(Try(List.empty[(Int, Int, Char, String)])) { (next, acc) =>
+      parseDimensionsTerrain(lignes.head).flatMap { case (largeur, hauteur) =>
+        val lignesTondeuses = lignes.tail
+        val pairesTondeuses = lignesTondeuses.sliding(2, 2).toList
+        val tondeusesAnalysees = pairesTondeuses.map(parseTondeuse)
+
+        val tondeusesValidees = tondeusesAnalysees.foldRight(Try(List.empty[(Int, Int, Char, String)])) { (next, acc) =>
           for {
-            mowers <- acc
-            mower <- next
-          } yield mower :: mowers
+            tondeuses <- acc
+            tondeuse <- next
+          } yield tondeuse :: tondeuses
         }
-        validatedMowers.map(mowerParams => (width, height, mowerParams))
+        tondeusesValidees.map(tondeuseParams => (largeur, hauteur, tondeuseParams))
       }
     }
   }

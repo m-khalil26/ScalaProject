@@ -1,6 +1,7 @@
-package progfun
+import progfun.{ConfigParser}
 
-import scala.util.{Try, Success, Failure}
+import java.io.File
+import scala.util.{Failure, Success}
 
 object Main extends App {
 
@@ -25,7 +26,13 @@ object Main extends App {
           println(s"Chosen CSV output path: $csvPath")
           println(s"Chosen YAML output path: $yamlPath")
 
-          parseInputFile(inputPath)
+          // Check if inputPath is reachable
+          if (isFileAccessible(inputPath)) {
+            parseInputFile(inputPath)
+          } else {
+            println(s"Error: Input file '$inputPath' is not accessible.")
+            sys.exit(1)
+          }
 
         case Failure(exception) =>
           println(s"Error reading configuration file: ${exception.getMessage}")
@@ -58,12 +65,20 @@ object Main extends App {
 
           case Failure(exception) =>
             println(s"Error parsing input file: ${exception.getMessage}")
+            exception.printStackTrace()
             sys.exit(1)
         }
 
       case Failure(exception) =>
         println(s"Error reading input file: ${exception.getMessage}")
+        exception.printStackTrace()
         sys.exit(1)
     }
+  }
+
+  // Function to check if a file is accessible
+  def isFileAccessible(filePath: String): Boolean = {
+    val file = new File(filePath)
+    file.exists() && file.isFile && file.canRead
   }
 }
