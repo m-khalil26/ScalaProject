@@ -20,7 +20,7 @@ class Tondeuse(var position: Position, var direction: Direction, val terrain: (I
       case Sud if y > 0    => position = Position(x, y - 1)
       case Est if x < maxX => position = Position(x + 1, y)
       case Ouest if x > 0  => position = Position(x - 1, y)
-      case _ => // Ne fait rien si l’on est sur le bord du terrain
+      case _ =>
     }
   }
 
