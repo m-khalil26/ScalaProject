@@ -1,8 +1,13 @@
-// src/main/scala/progfun/Tondeuse.scala
-
 package progfun
 
 class Tondeuse(var position: Position, var direction: Direction, val terrain: (Int, Int)) {
+
+  private var _commandes: String = ""
+
+  def commandes: String = _commandes
+  def commandes_=(value: String): Unit = {
+    _commandes = value
+  }
 
   def tournerGauche(): Unit = {
     direction = direction.tournerGauche
@@ -21,6 +26,17 @@ class Tondeuse(var position: Position, var direction: Direction, val terrain: (I
       case Est if x < maxX => position = Position(x + 1, y)
       case Ouest if x > 0  => position = Position(x - 1, y)
       case _ =>
+    }
+  }
+
+  def executerCommandes(): Unit = {
+    for (cmd <- _commandes) {
+      cmd match {
+        case 'G' => tournerGauche()
+        case 'D' => tournerDroite()
+        case 'A' => avancer()
+        case _ => println(s"Commande inconnue: $cmd")
+      }
     }
   }
 

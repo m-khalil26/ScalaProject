@@ -1,10 +1,19 @@
-
 package progfun
 
 sealed trait Direction {
   def tournerDroite: Direction
   def tournerGauche: Direction
   def code: Char
+}
+
+object Direction {
+  def fromChar(char: Char): Option[Direction] = char match {
+    case 'N' => Some(Nord)
+    case 'S' => Some(Sud)
+    case 'E' => Some(Est)
+    case 'O' => Some(Ouest)
+    case _ => None
+  }
 }
 
 case object Nord extends Direction {

@@ -11,7 +11,6 @@ class InputParser(input: String) {
           println(largeur + " " + hauteur)
           val largeurInt = largeur.toInt
           val hauteurInt = hauteur.toInt
-          println("largeurInt : " + largeurInt + " hauteurInt : " + hauteurInt)
           (largeurInt, hauteurInt)
         }.recoverWith {
           case _: NumberFormatException =>
