@@ -1,9 +1,9 @@
 package progfun.string_functions
 
-class StringFunctions {
-}
+class StringFunctions {}
 
 object StringFunctions {
+
   def stripPrefix(s: String, prefix: String): String = {
     @scala.annotation.tailrec
     def stripPrefixAux(s: String, prefix: String, sIndex: Int, pIndex: Int): String = {
@@ -42,41 +42,32 @@ object StringFunctions {
     stripSuffixAux(s, suffix, suffix.length - 1)
   }
 
-
-
-
-
-  def stringLength(string:String):Int = {
-    stringLength_aux(string,0);
+  def stringLength(string: String): Int = {
+    stringLength_aux(string, 0)
   }
+
   @annotation.tailrec
-  private def stringLength_aux(string:String, count:Int):Int ={
+  private def stringLength_aux(string: String, count: Int): Int = {
     string match {
       case "" => count
-      case _ => stringLength_aux(string.tail, count+1)
+      case _ => stringLength_aux(string.tail, count + 1)
     }
   }
 
   def customTrim(str: String): String = {
     @scala.annotation.tailrec
-    def trimRecursive(str: String, i: Int):String = {
-      str match{
-        case "" => str
-        case " "+:q => if (i == 0) trimRecursive(q, i+1) else trimRecursive(str, i+1)
-        case t:+" ":+nil => if (i == 0) trimRecursive(t, i+1) else trimRecursive(str, i+1)
-      }
+    def trimLeft(s: String): String = {
+      if (s.nonEmpty && (s.head == ' ' || s.head == '\r')) trimLeft(s.tail) else s
     }
-    trimRecursive(str, 0)
-  }
-  @scala.annotation.tailrec
-  def  containsNull(str :String ):Boolean ={
 
-    str match {
-      case "" => false
-      case null+:q =>  true
-      case head +: tail =>  containsNull(tail)
+    @scala.annotation.tailrec
+    def trimRight(s: String): String = {
+      if (s.nonEmpty && (s.last == ' ' || s.last == '\r')) trimRight(s.init) else s
     }
+
+    trimRight(trimLeft(str))
   }
+
   def trimParts(strings: Array[String]): Array[String] = {
     @scala.annotation.tailrec
     def trimParts_aux(strings: Array[String], index: Int, result: Array[String]): Array[String] = {
@@ -111,7 +102,6 @@ object StringFunctions {
     if (start >= end || start < 0 || end > s.length) ""
     else loop(start, "")
   }
-
 
   def splitString(line: String, delimiter: Char): Array[String] = {
     @annotation.tailrec
@@ -150,8 +140,6 @@ object StringFunctions {
 
     splitOnDelimAux(str, char, List.empty[String]).toArray
   }
-
-
 
   def arrayLength(arr: Array[String]): Int = {
     @scala.annotation.tailrec

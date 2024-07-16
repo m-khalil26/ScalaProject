@@ -26,18 +26,20 @@ class Tondeuse(val position: Position, val direction: Direction, val terrain: (I
       case Sud if y > 0    => Position(x, y - 1)
       case Est if x < maxX => Position(x + 1, y)
       case Ouest if x > 0  => Position(x - 1, y)
-      case _ => position 
+      case _ => position
     }
     withPosition(newPosition)
   }
 
-  def executerCommandes(): Unit = {
-    _commandes.foreach { cmd =>
+  def executerCommandes(): Tondeuse = {
+    _commandes.foldLeft(this) { (tondeuse, cmd) =>
       cmd match {
-        case 'G' => tournerGauche()
-        case 'D' => tournerDroite()
-        case 'A' => avancer()
-        case _ => println(s"Commande inconnue: $cmd")
+        case 'G' => tondeuse.tournerGauche()
+        case 'D' => tondeuse.tournerDroite()
+        case 'A' => tondeuse.avancer()
+        case _ =>
+          println(s"Commande inconnue: $cmd")
+          tondeuse
       }
     }
   }

@@ -1,35 +1,41 @@
+package progfun
+
 import better.files.File
 import progfun.string_functions.StringFunctions
 import progfun.string_functions.StringFunctions.splitOnDelim
 
-import scala.util.{Failure, Success, Try}
-import java.nio.charset.Charset
 import scala.sys.exit
 
 class InputParser(input: String) {
 
-  private def parseDimensionsTerrain(ligne: String): Try[(Int, Int)] = {
+  private def parseDimensionsTerrain(ligne: String): (Int, Int) = {
     val trimmedLine = StringFunctions.customTrim(ligne)
     val spaceIndex = StringFunctions.findFirstSpace(trimmedLine)
+
 
     if (spaceIndex >= 0) {
       val largeur = StringFunctions.extractSubstring(trimmedLine, 0, spaceIndex)
       val hauteur = StringFunctions.extractSubstring(trimmedLine, spaceIndex + 1, StringFunctions.stringLength(trimmedLine))
 
-      Try {
+
+      try {
         val largeurInt = largeur.toInt
         val hauteurInt = hauteur.toInt
         (largeurInt, hauteurInt)
-      }.recoverWith {
+      } catch {
         case _: NumberFormatException =>
+          println(s"Les dimensions du terrain doivent être des entiers. Found: largeur='$largeur', hauteur='$hauteur'")
           exit(1)
       }
     } else {
+      println("Les dimensions du terrain doivent être séparées par un espace.")
       exit(1)
     }
   }
 
-  private def parseTondeuse(lines: Array[String]): Try[(Int, Int, Char, String)] = {
+
+  private def parseTondeuse(lines: Array[String]): (Int, Int, Char, String) = {
+
     if (lines.length == 2) {
       val positionLine = StringFunctions.customTrim(lines(0))
       val commands = StringFunctions.customTrim(lines(1))
@@ -37,62 +43,53 @@ class InputParser(input: String) {
       if (positionLine.nonEmpty && commands.nonEmpty) {
         val parts = positionLine.split(' ')
         if (parts.length == 3) {
-          Try {
+          try {
             val x = parts(0).toInt
             val y = parts(1).toInt
             val orientation = parts(2).charAt(0)
             (x, y, orientation, commands)
-          }.recoverWith {
+          } catch {
             case _: NumberFormatException =>
+              println("Les coordonnées de la tondeuse doivent être des entiers.")
               exit(1)
           }
         } else {
+          println("La ligne de position de la tondeuse doit contenir 3 parties.")
           exit(1)
         }
       } else {
+        println("La ligne de position de la tondeuse et les commandes ne doivent pas être vides.")
         exit(1)
       }
     } else {
+      println("La tondeuse doit être définie par une ligne de position et une ligne de commandes.")
       exit(1)
     }
   }
 
-
-
-  def parse(): Try[(Int, Int, List[(Int, Int, Char, String)])] = {
+  def parse(): (Int, Int, List[(Int, Int, Char, String)]) = {
     val splitted = splitOnDelim(input, '\n')
     val lignes = StringFunctions.trimParts(splitted)
 
+
     if (lignes.length < 2) {
+      println("Input does not contain enough lines.")
       exit(1)
     } else {
-      parseDimensionsTerrain(lignes(0)).flatMap { case (largeur, hauteur) =>
-        val lignesTondeuses = lignes.tail
-        val pairesTondeuses = lignesTondeuses.grouped(2).toArray
-        val tondeusesAnalysees = pairesTondeuses.map(parseTondeuse)
+      val (largeur, hauteur) = parseDimensionsTerrain(lignes(0))
+      val lignesTondeuses = lignes.tail
+      val pairesTondeuses = lignesTondeuses.grouped(2).toArray
+      val tondeusesAnalysees = pairesTondeuses.map(parseTondeuse).toList
 
-        val tondeusesValidees = tondeusesAnalysees.foldLeft(Try(List.empty[(Int, Int, Char, String)])) { (acc, next) =>
-          for {
-            tondeuses <- acc
-            tondeuse <- next
-          } yield tondeuse :: tondeuses
-        }
-
-        tondeusesValidees.map(tondeuseParams => (largeur, hauteur, tondeuseParams))
-      }
+      (largeur, hauteur, tondeusesAnalysees)
     }
   }
 }
 
 object InputParser {
-  def fromFile(filePath: String): Try[InputParser] = {
-    Try {
-      val file = File(filePath)
-      val fileContents = file.contentAsString
-      new InputParser(fileContents)
-    }.transform(
-      inputParser => Success(inputParser),
-      ex => exit(1)
-    )
+  def fromFile(filePath: String): InputParser = {
+    val file = File(filePath)
+    val fileContents = file.contentAsString
+    new InputParser(fileContents)
   }
 }
