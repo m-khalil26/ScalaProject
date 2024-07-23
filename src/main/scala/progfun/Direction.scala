@@ -12,7 +12,7 @@ object Direction {
     case 'S' => Some(Sud)
     case 'E' => Some(Est)
     case 'O' => Some(Ouest)
-    case _ => None
+    case _   => None
   }
 }
 

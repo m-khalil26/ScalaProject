@@ -1,12 +1,18 @@
 package progfun
 
-class Tondeuse(val position: Position, val direction: Direction, val terrain: (Int, Int), private val _commandes: String) {
+class Tondeuse(
+    val position: Position,
+    val direction: Direction,
+    val terrain: (Int, Int),
+    private val _commandes: String) {
 
   def commandes: String = _commandes
 
-  private def withPosition(newPosition: Position): Tondeuse = new Tondeuse(newPosition, direction, terrain, _commandes)
+  private def withPosition(newPosition: Position): Tondeuse =
+    new Tondeuse(newPosition, direction, terrain, _commandes)
 
-  private def withDirection(newDirection: Direction): Tondeuse = new Tondeuse(position, newDirection, terrain, _commandes)
+  private def withDirection(newDirection: Direction): Tondeuse =
+    new Tondeuse(position, newDirection, terrain, _commandes)
 
   def tournerGauche(): Tondeuse = {
     val newDirection = direction.tournerGauche
@@ -23,10 +29,10 @@ class Tondeuse(val position: Position, val direction: Direction, val terrain: (I
     val (x, y) = (position.x, position.y)
     val newPosition = direction match {
       case Nord if y < maxY => Position(x, y + 1)
-      case Sud if y > 0    => Position(x, y - 1)
-      case Est if x < maxX => Position(x + 1, y)
-      case Ouest if x > 0  => Position(x - 1, y)
-      case _ => position
+      case Sud if y > 0     => Position(x, y - 1)
+      case Est if x < maxX  => Position(x + 1, y)
+      case Ouest if x > 0   => Position(x - 1, y)
+      case _                => position
     }
     withPosition(newPosition)
   }
@@ -48,4 +54,5 @@ class Tondeuse(val position: Position, val direction: Direction, val terrain: (I
     println(s"Position: (${position.x}, ${position.y})")
     println(s"Direction: ${direction.code}")
   }
+
 }

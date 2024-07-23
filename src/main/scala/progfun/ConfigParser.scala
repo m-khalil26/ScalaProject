@@ -2,7 +2,12 @@ package progfun
 
 import better.files.File
 import progfun.string_functions.StringFunctions
-import progfun.string_functions.StringFunctions.{stripPrefix, stripSuffix, customTrim, extractSubstring}
+import progfun.string_functions.StringFunctions.{
+  customTrim,
+  extractSubstring,
+  stripPrefix,
+  stripSuffix
+}
 
 import scala.util.{Failure, Success, Try}
 
@@ -20,36 +25,53 @@ class ConfigParser(json: String) {
         val keyStart = json.indexOf('"') + 1
         val keyEnd = json.indexOf('"', keyStart)
         val key = extractSubstring(json, keyStart, keyEnd)
-        val jsonSubstring = extractSubstring(json, keyEnd + 1, StringFunctions.stringLength(json))
+        val jsonSubstring =
+          extractSubstring(json, keyEnd + 1, StringFunctions.stringLength(json))
         (key, jsonSubstring)
       }
 
       def extractValue(json: String): (String, String) = {
         val valueStart = json.indexOf(':') + 1
-        val jsonSubstring = extractSubstring(json, valueStart, StringFunctions.stringLength(json))
+        val jsonSubstring =
+          extractSubstring(json, valueStart, StringFunctions.stringLength(json))
 
         val valueJson = customTrim(jsonSubstring)
         if (valueJson.startsWith("\"")) {
           val valueStart = valueJson.indexOf('"') + 1
           val valueEnd = valueJson.indexOf('"', valueStart)
           val value = extractSubstring(valueJson, valueStart, valueEnd)
-          val jsonSubstring = extractSubstring(valueJson, valueEnd + 1, StringFunctions.stringLength(valueJson))
+          val jsonSubstring = extractSubstring(
+            valueJson,
+            valueEnd + 1,
+            StringFunctions.stringLength(valueJson)
+          )
           (value, jsonSubstring)
         } else {
           val valueEnd = valueJson.indexOf(',')
-          val value = if (valueEnd == -1) valueJson else extractSubstring(valueJson, 0, valueEnd)
-          val jsonSubstring = extractSubstring(valueJson, valueEnd + 1, StringFunctions.stringLength(valueJson))
+          val value =
+            if (valueEnd == -1) valueJson
+            else extractSubstring(valueJson, 0, valueEnd)
+          val jsonSubstring = extractSubstring(
+            valueJson,
+            valueEnd + 1,
+            StringFunctions.stringLength(valueJson)
+          )
           (value, if (valueEnd == -1) "" else jsonSubstring)
         }
       }
 
       @scala.annotation.tailrec
-      def parsePairs_aux(json: String, acc: List[(String, String)]): List[(String, String)] = {
+      def parsePairs_aux(
+          json: String,
+          acc: List[(String, String)]): List[(String, String)] = {
         if (json.isEmpty) acc
         else {
           val (key, restAfterKey) = extractKey(json)
           val (value, restAfterValue) = extractValue(restAfterKey)
-          parsePairs_aux(restAfterValue.drop(1), (key, value) :: acc) // Drop comma and prepend
+          parsePairs_aux(
+            restAfterValue.drop(1),
+            (key, value) :: acc
+          ) // Drop comma and prepend
         }
       }
 

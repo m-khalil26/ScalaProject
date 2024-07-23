@@ -12,11 +12,13 @@ class InputParser(input: String) {
     val trimmedLine = StringFunctions.customTrim(ligne)
     val spaceIndex = StringFunctions.findFirstSpace(trimmedLine)
 
-
     if (spaceIndex >= 0) {
       val largeur = StringFunctions.extractSubstring(trimmedLine, 0, spaceIndex)
-      val hauteur = StringFunctions.extractSubstring(trimmedLine, spaceIndex + 1, StringFunctions.stringLength(trimmedLine))
-
+      val hauteur = StringFunctions.extractSubstring(
+        trimmedLine,
+        spaceIndex + 1,
+        StringFunctions.stringLength(trimmedLine)
+      )
 
       try {
         val largeurInt = largeur.toInt
@@ -24,7 +26,9 @@ class InputParser(input: String) {
         (largeurInt, hauteurInt)
       } catch {
         case _: NumberFormatException =>
-          println(s"Les dimensions du terrain doivent être des entiers. Found: largeur='$largeur', hauteur='$hauteur'")
+          println(
+            s"Les dimensions du terrain doivent être des entiers. Found: largeur='$largeur', hauteur='$hauteur'"
+          )
           exit(1)
       }
     } else {
@@ -32,7 +36,6 @@ class InputParser(input: String) {
       exit(1)
     }
   }
-
 
   private def parseTondeuse(lines: Array[String]): (Int, Int, Char, String) = {
 
@@ -50,19 +53,27 @@ class InputParser(input: String) {
             (x, y, orientation, commands)
           } catch {
             case _: NumberFormatException =>
-              println("Les coordonnées de la tondeuse doivent être des entiers.")
+              println(
+                "Les coordonnées de la tondeuse doivent être des entiers."
+              )
               exit(1)
           }
         } else {
-          println("La ligne de position de la tondeuse doit contenir 3 parties.")
+          println(
+            "La ligne de position de la tondeuse doit contenir 3 parties."
+          )
           exit(1)
         }
       } else {
-        println("La ligne de position de la tondeuse et les commandes ne doivent pas être vides.")
+        println(
+          "La ligne de position de la tondeuse et les commandes ne doivent pas être vides."
+        )
         exit(1)
       }
     } else {
-      println("La tondeuse doit être définie par une ligne de position et une ligne de commandes.")
+      println(
+        "La tondeuse doit être définie par une ligne de position et une ligne de commandes."
+      )
       exit(1)
     }
   }
@@ -70,7 +81,6 @@ class InputParser(input: String) {
   def parse(): (Int, Int, List[(Int, Int, Char, String)]) = {
     val splitted = splitOnDelim(input, '\n')
     val lignes = StringFunctions.trimParts(splitted)
-
 
     if (lignes.length < 2) {
       println("Input does not contain enough lines.")

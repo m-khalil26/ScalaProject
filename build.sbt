@@ -1,5 +1,6 @@
 import Dependencies._
 
+
 ThisBuild / scalaVersion     := "3.3.3"
 ThisBuild / version          := "0.1.0-SNAPSHOT"
 ThisBuild / organization     := "fr.esgi"
@@ -9,7 +10,7 @@ ThisBuild / scalafmtOnCompile := true
 
 run / fork := true
 run / connectInput := true
-Compile / mainClass := Some("fr.esgi.al.funprog.Main")
+Compile / mainClass := Some("funprog.Main")
 
 lazy val root = (project in file("."))
   .settings(

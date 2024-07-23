@@ -1,0 +1,3 @@
+limite_x,limite_y,debut_x,debut_y,debut_direction,instructions,fin_x,fin_y,fin_direction
+5,5,1,2,N,GAGAGAGAA,1,3,N
+5,5,3,3,E,AADAADADDA,5,1,E

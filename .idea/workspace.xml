@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ba73f47-c893-411d-b74d-205b0daa36fa" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pathikrit_better_files_3_3_9_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pathikrit_better_files_3_3_9_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_geny_3_1_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_geny_3_1_0_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_ujson_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_ujson_3_3_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upack_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upack_3_3_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_3_3_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_core_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_core_3_3_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_implicits_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_implicits_3_3_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_13_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_13_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_3_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_4_2_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_12_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_sbt_test_interface_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_sbt_test_interface_1_0_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_3_3_2_16_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_3_3_2_16_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_junit_interface_1_0_0_M11_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_junit_interface_1_0_0_M11_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_munit_3_1_0_0_M11_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_munit_3_1_0_0_M11_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_4_2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/funprog-AL.funprog-AL-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL.funprog-AL-build.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/funprog-AL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.bloop/funprog-al-build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/project/.bloop/funprog-al-build-build.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Hello.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/example/Hello.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Json.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/example/Json.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/ConfigParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/ConfigParser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Direction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Direction.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/InputParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/InputParser.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Main.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Position.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Position.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Tondeuse.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Tondeuse.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/string_functions/StringFunctions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/string_functions/StringFunctions.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/example/HelloSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/example/HelloSuite.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/scala/example/StringSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/example/StringSuite.scala" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2jLas10rWEuXAHywB3PzTjVETzA" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "D:/Cours/ScalaProject",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="funprog-AL" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ScalaProjectSettings">
+    <option name="scala3DisclaimerShown" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ba73f47-c893-411d-b74d-205b0daa36fa" name="Changes" comment="" />
+      <created>1721169014933</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721169014933</updated>
+      <workItem from="1721169016046" duration="65000" />
+      <workItem from="1721169112690" duration="2672000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -6,7 +6,11 @@ object StringFunctions {
 
   def stripPrefix(s: String, prefix: String): String = {
     @scala.annotation.tailrec
-    def stripPrefixAux(s: String, prefix: String, sIndex: Int, pIndex: Int): String = {
+    def stripPrefixAux(
+        s: String,
+        prefix: String,
+        sIndex: Int,
+        pIndex: Int): String = {
       if (pIndex == prefix.length) s.drop(sIndex)
       else if (sIndex >= s.length) ""
       else {
@@ -50,19 +54,21 @@ object StringFunctions {
   private def stringLength_aux(string: String, count: Int): Int = {
     string match {
       case "" => count
-      case _ => stringLength_aux(string.tail, count + 1)
+      case _  => stringLength_aux(string.tail, count + 1)
     }
   }
 
   def customTrim(str: String): String = {
     @scala.annotation.tailrec
     def trimLeft(s: String): String = {
-      if (s.nonEmpty && (s.head == ' ' || s.head == '\r')) trimLeft(s.tail) else s
+      if (s.nonEmpty && (s.head == ' ' || s.head == '\r')) trimLeft(s.tail)
+      else s
     }
 
     @scala.annotation.tailrec
     def trimRight(s: String): String = {
-      if (s.nonEmpty && (s.last == ' ' || s.last == '\r')) trimRight(s.init) else s
+      if (s.nonEmpty && (s.last == ' ' || s.last == '\r')) trimRight(s.init)
+      else s
     }
 
     trimRight(trimLeft(str))
@@ -70,7 +76,10 @@ object StringFunctions {
 
   def trimParts(strings: Array[String]): Array[String] = {
     @scala.annotation.tailrec
-    def trimParts_aux(strings: Array[String], index: Int, result: Array[String]): Array[String] = {
+    def trimParts_aux(
+        strings: Array[String],
+        index: Int,
+        result: Array[String]): Array[String] = {
       if (index >= strings.length) {
         result
       } else {
@@ -105,10 +114,18 @@ object StringFunctions {
 
   def splitString(line: String, delimiter: Char): Array[String] = {
     @annotation.tailrec
-    def splitRecursive(s: String, d: Char, acc: Array[String]): Array[String] = {
+    def splitRecursive(
+        s: String,
+        d: Char,
+        acc: Array[String]): Array[String] = {
       val idx = findFirstSpace(s)
       if (idx < 0) acc :+ s
-      else splitRecursive(extractSubstring(s, idx + 1, s.length), d, acc :+ extractSubstring(s, 0, idx))
+      else
+        splitRecursive(
+          extractSubstring(s, idx + 1, s.length),
+          d,
+          acc :+ extractSubstring(s, 0, idx)
+        )
     }
 
     splitRecursive(line, delimiter, Array.empty)
@@ -116,7 +133,10 @@ object StringFunctions {
 
   def splitOnDelim(str: String, char: Char): Array[String] = {
     @scala.annotation.tailrec
-    def splitOnDelimAux(currentStr: String, delim: Char, acc: List[String]): List[String] = {
+    def splitOnDelimAux(
+        currentStr: String,
+        delim: Char,
+        acc: List[String]): List[String] = {
       if (currentStr.isEmpty) acc.reverse
       else {
         @scala.annotation.tailrec
