@@ -21,17 +21,14 @@
                 "A",
                 "G",
                 "A",
-                "A",
-                "G",
-                "G",
-                "G"
+                "A"
             ],
             "fin": {
                 "point": {
                     "x": 1,
                     "y": 3
                 },
-                "direction": "E"
+                "direction": "N"
             }
         },
         {

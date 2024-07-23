@@ -10,8 +10,9 @@ class InputParserTest extends munit.FunSuite {
     assertEquals((parsed._1, parsed._2), expected)
   }
 
-
-  private def testParseTondeuse(input: String, expected: List[(Int, Int, Char, String)]): Unit = {
+  private def testParseTondeuse(
+      input: String,
+      expected: List[(Int, Int, Char, String)]): Unit = {
     val parser = new InputParser(input)
     val parsed = parser.parse()
     assertEquals(parsed._3, expected)

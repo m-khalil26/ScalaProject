@@ -2,7 +2,7 @@ package funProgTests
 
 import progfun.{Est, Nord, Ouest, Position, Tondeuse}
 
-class TondeuseTest extends munit.FunSuite{
+class TondeuseTest extends munit.FunSuite {
   test("Tondeuse should turn left correctly") {
     val initialTondeuse = new Tondeuse(Position(0, 0), Nord, (5, 5), "")
     val turnedTondeuse = initialTondeuse.tournerGauche()
@@ -28,7 +28,8 @@ class TondeuseTest extends munit.FunSuite{
   }
 
   test("Tondeuse should execute commands correctly") {
-    val initialTondeuse = new Tondeuse(Position(1, 2), Nord, (5, 5), "GAGAGAGAA")
+    val initialTondeuse =
+      new Tondeuse(Position(1, 2), Nord, (5, 5), "GAGAGAGAA")
     val finalTondeuse = initialTondeuse.executerCommandes()
     assertEquals(finalTondeuse.position, Position(1, 3))
     assertEquals(finalTondeuse.direction, Nord)

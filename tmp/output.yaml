@@ -7,12 +7,12 @@ tondeuses:
         x: 1
         y: 2
       direction: N
-    instructions: [G, A, G, A, G, A, G, A, A, G, G, G]
+    instructions: [G, A, G, A, G, A, G, A, A]
     fin:
       point:
         x: 1
         y: 3
-      direction: E
+      direction: N
   - debut:
       point:
         x: 3

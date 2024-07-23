@@ -2,7 +2,7 @@ package funProgTests
 
 import progfun.{Direction, Est, Nord, Ouest, Sud}
 
-class DirectionTest extends munit.FunSuite{
+class DirectionTest extends munit.FunSuite {
   test("Nord should turn right to Est and left to Ouest") {
     assertEquals(Nord.tournerDroite, Est)
     assertEquals(Nord.tournerGauche, Ouest)
