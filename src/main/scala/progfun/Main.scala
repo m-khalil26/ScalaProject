@@ -1,9 +1,7 @@
 package funprog
 
 import progfun.{ConfigParser, Direction, InputParser, Position, Tondeuse}
-import upickle.default._
-import java.io.{File, PrintWriter}
-//import scala.annotation.tailrec
+import java.io.File
 import scala.util.{Failure, Success}
 
 final case class Point(x: Int, y: Int)
@@ -17,12 +15,17 @@ final case class Limite(x: Int, y: Int)
 final case class Result(limite: Limite, tondeuses: List[TondeuseResult])
 
 object JsonImplicits {
-  implicit val pointRW: ReadWriter[Point] = macroRW
-  implicit val debutRW: ReadWriter[Debut] = macroRW
-  implicit val finRW: ReadWriter[Fin] = macroRW
-  implicit val tondeuseResultRW: ReadWriter[TondeuseResult] = macroRW
-  implicit val limiteRW: ReadWriter[Limite] = macroRW
-  implicit val resultRW: ReadWriter[Result] = macroRW
+  implicit val pointRW: upickle.default.ReadWriter[Point] =
+    upickle.default.macroRW
+  implicit val debutRW: upickle.default.ReadWriter[Debut] =
+    upickle.default.macroRW
+  implicit val finRW: upickle.default.ReadWriter[Fin] = upickle.default.macroRW
+  implicit val tondeuseResultRW: upickle.default.ReadWriter[TondeuseResult] =
+    upickle.default.macroRW
+  implicit val limiteRW: upickle.default.ReadWriter[Limite] =
+    upickle.default.macroRW
+  implicit val resultRW: upickle.default.ReadWriter[Result] =
+    upickle.default.macroRW
 }
 
 object Main {
@@ -68,12 +71,14 @@ object Main {
       }
     )
 
+    val fileWriters = new FileWriters
+
     if (isFileAccessible(inputPath)) {
       try {
         val results = parseInputFile(inputPath)
-        writeResultsToJson(jsonPath, results)
-        writeResultsToCsv(csvPath, results)
-        writeResultsToYaml(yamlPath, results)
+        fileWriters.writeResultsToJson(jsonPath, results)
+        fileWriters.writeResultsToCsv(csvPath, results)
+        fileWriters.writeResultsToYaml(yamlPath, results)
       } catch {
         case e: IllegalArgumentException =>
           println(s"Error parsing input file: ${e.getMessage}")
@@ -119,56 +124,6 @@ object Main {
     }
 
     Result(Limite(width, height), tondeusesResults)
-  }
-
-  def writeResultsToJson(jsonPath: String, results: Result): Unit = {
-    val file = new File(jsonPath)
-    val writer = new PrintWriter(file)
-    writer.write(write(results, indent = 4))
-    writer.close()
-  }
-
-  def writeResultsToCsv(csvPath: String, results: Result): Unit = {
-    val file = new File(csvPath)
-    val writer = new PrintWriter(file)
-    writer.write(
-      "limite_x,limite_y,debut_x,debut_y,debut_direction,instructions,fin_x,fin_y,fin_direction\n"
-    )
-    results.tondeuses.foreach { tondeuse =>
-      val debut = tondeuse.debut
-      val fin = tondeuse.fin
-      val instructions = tondeuse.instructions.mkString("")
-      writer.write(
-        s"${results.limite.x},${results.limite.y},${debut.point.x},${debut.point.y},${debut.direction},${instructions},${fin.point.x},${fin.point.y},${fin.direction}\n"
-      )
-    }
-    writer.close()
-  }
-
-  def writeResultsToYaml(yamlPath: String, results: Result): Unit = {
-    val file = new File(yamlPath)
-    val writer = new PrintWriter(file)
-
-    writer.write(
-      s"limite:\n  x: ${results.limite.x}\n  y: ${results.limite.y}\n"
-    )
-    writer.write("tondeuses:\n")
-    results.tondeuses.foreach { tondeuse =>
-      writer.write(s"  - debut:\n")
-      writer.write(s"      point:\n")
-      writer.write(s"        x: ${tondeuse.debut.point.x}\n")
-      writer.write(s"        y: ${tondeuse.debut.point.y}\n")
-      writer.write(s"      direction: ${tondeuse.debut.direction}\n")
-      writer.write(
-        s"    instructions: [${tondeuse.instructions.mkString(", ")}]\n"
-      )
-      writer.write(s"    fin:\n")
-      writer.write(s"      point:\n")
-      writer.write(s"        x: ${tondeuse.fin.point.x}\n")
-      writer.write(s"        y: ${tondeuse.fin.point.y}\n")
-      writer.write(s"      direction: ${tondeuse.fin.direction}\n")
-    }
-    writer.close()
   }
 
   def isFileAccessible(filePath: String): Boolean = {
