@@ -5,45 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5ba73f47-c893-411d-b74d-205b0daa36fa" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL-build.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pathikrit_better_files_3_3_9_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_github_pathikrit_better_files_3_3_9_2_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_geny_3_1_0_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_geny_3_1_0_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_ujson_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_ujson_3_3_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upack_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upack_3_3_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_3_3_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_core_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_core_3_3_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_implicits_3_3_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__com_lihaoyi_upickle_implicits_3_3_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_13_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__junit_junit_4_13_2_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_hamcrest_hamcrest_core_1_3_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_3_3_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_4_2_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_12_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala_library_2_13_12_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_sbt_test_interface_1_0_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_sbt_test_interface_1_0_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_3_3_2_16_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalactic_scalactic_3_3_2_16_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_junit_interface_1_0_0_M11_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_junit_interface_1_0_0_M11_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_munit_3_1_0_0_M11_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scalameta_munit_3_1_0_0_M11_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_3_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_4_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/funProgTests/ConfigParserTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/funProgTests/DirectionTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/funProgTests/InputParserTest.scala" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/scala/funProgTests/TondeuseTest.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.bsp/sbt.json" beforeDir="false" afterPath="$PROJECT_DIR$/.bsp/sbt.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_4_2_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__org_scala_lang_scala3_library_3_3_3_3_jar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/sbt__scala_sdk_3_3_3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/funprog-AL-build.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/funprog-AL.funprog-AL-build.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL.funprog-AL-build.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules/funprog-AL.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/funprog-AL.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sbt.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sbt.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/scala_compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/scala_compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/.bloop/funprog-al-build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/project/project/.bloop/funprog-al-build-build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Hello.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/example/Hello.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/example/Json.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/example/Json.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project/.bloop/scalaproject-build.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/ConfigParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/ConfigParser.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Direction.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Direction.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/InputParser.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/InputParser.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Main.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Main.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Position.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Position.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/Tondeuse.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/Tondeuse.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/scala/progfun/string_functions/StringFunctions.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/scala/progfun/string_functions/StringFunctions.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/example/HelloSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/example/HelloSuite.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/scala/example/StringSuite.scala" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/scala/example/StringSuite.scala" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,9 +33,35 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="SBT">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="funprog-AL" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -68,12 +72,20 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="2jLas10rWEuXAHywB3PzTjVETzA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.funprog.Main.executor": "Run",
+    "MUnit.ConfigParserTest (1).executor": "Run",
+    "MUnit.ConfigParserTest.executor": "Run",
+    "MUnit.DirectionTest.executor": "Run",
+    "MUnit.InputParserTest.executor": "Run",
+    "MUnit.TondeuseTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -85,16 +97,127 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="Main" />
+      <option name="MAIN_CLASS_NAME" value="funprog.Main" />
       <module name="funprog-AL" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="funprog.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigParserTest (1)" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="funprog-AL" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <option name="testClassPath" value="funProgTests.ConfigParserTest" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ConfigParserTest" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="funprog-AL" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <option name="testClassPath" value="example.ConfigParserTest" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectionTest" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="funprog-AL" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <option name="testClassPath" value="funProgTests.DirectionTest" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InputParserTest" type="MUnitRunConfiguration" factoryName="MUnit" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="funprog-AL" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
+      <option name="testClassPath" value="funProgTests.InputParserTest" />
+      <option name="workingDirectory" value="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,10 +225,15 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Main" />
+        <item itemvalue="MUnit.DirectionTest" />
+        <item itemvalue="MUnit.ConfigParserTest (1)" />
+        <item itemvalue="MUnit.ConfigParserTest" />
+        <item itemvalue="MUnit.InputParserTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="ScalaProjectSettings">
+    <option name="migrateConfigurationsNotificationShown" value="true" />
     <option name="scala3DisclaimerShown" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

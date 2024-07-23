@@ -91,7 +91,7 @@
         <parameter value="-Wunused:imports,privates,locals,explicits,implicits,params,linted" />
       </parameters>
       <plugins>
-        <plugin path="D:\Cours\ScalaProject\target\scala-3.4.2\compiler_plugins\wartremover_3.4.2-3.1.6.jar" />
+        <plugin path="C:\Users\Khali\Desktop\M1\S2\Scala\Projet\funprog-al\target\scala-3.3.3\compiler_plugins\wartremover_3.3.3-3.1.6.jar" />
       </plugins>
     </profile>
   </component>

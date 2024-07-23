@@ -71,7 +71,7 @@ class ConfigParser(json: String) {
           parsePairs_aux(
             restAfterValue.drop(1),
             (key, value) :: acc
-          ) // Drop comma and prepend
+          ) 
         }
       }
 
